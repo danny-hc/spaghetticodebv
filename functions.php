@@ -60,7 +60,7 @@ function processImageUpload($title, $upload_data) {
     if (!in_array($image_extension, $allowed_extensions)) {
         return array(
             'succes' => false,
-            'message' => 'Ongeldige type, toegestaan: jpg, jpeg, gif of png'
+            'message' => 'Ongeldige type, toegestaan: jpg of gif'
         );
     }
 
