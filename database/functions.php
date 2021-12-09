@@ -15,7 +15,6 @@ function saveImageToDatabase($title, $filename, $original_filename) {
     $dbh = connectToDatabase();
 
     if (!$dbh) {
-        echo 'wut';
         return false;
     }
 

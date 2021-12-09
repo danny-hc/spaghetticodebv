@@ -1,6 +1,10 @@
 body {
     font-family: Arial;
 }
+.logo {
+    float: right;
+    width: 120px;
+}
 .ok {
     color: green;
 }
