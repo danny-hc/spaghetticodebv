@@ -6,4 +6,4 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<img class="logo" src="images/spaghetti.jpg">
+<img class="logo" src="images/spaghetti.jpg" alt="spaghetti logo">
