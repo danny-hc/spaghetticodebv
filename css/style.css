@@ -1,0 +1,29 @@
+body {
+    font-family: Arial;
+}
+.ok {
+    color: green;
+}
+.error {
+    color: red;
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.item {
+    width:200px;
+    overflow:hidden;
+    margin: 15px;
+    padding: 5px;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 14px;
+}
+.item a:nth-child(1) {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.image {
+    width: 200px;
+}
