@@ -1,6 +1,5 @@
 <?php
 
-
 function connectToDatabase() {
     try {
         $dbh = new PDO('mysql:host=localhost;dbname=social', 'root', '');
@@ -23,12 +22,18 @@ function saveImageToDatabase($title, $filename, $original_filename) {
     $st = $dbh->prepare($query);
 
     if (!$st->execute(Array($title, $filename, $original_filename))) {
-        echo 'wow';
-        print_r($dbh->errorInfo());
         return false;
     }
 
     return $dbh->lastInsertId();
+}
+
+function singleImage($id) {
+    $dbh = connectToDatabase();
+
+    $sql = "SELECT * FROM images WHERE id=" . $dbh->quote($id);
+
+    return $dbh->query($sql, PDO::FETCH_ASSOC);
 }
 
 function imageListFromDatabase($id = null) {
@@ -42,6 +47,8 @@ function imageListFromDatabase($id = null) {
 
     if ($id) {
         $sql .= " WHERE id=" . $dbh->quote($id);
+
+        return 'test';
     }
 
     return $dbh->query($sql, PDO::FETCH_ASSOC);
@@ -50,5 +57,6 @@ function imageListFromDatabase($id = null) {
 function deleteImageFromDatabase($id) {
     // todo
 }
+
 
 ?>

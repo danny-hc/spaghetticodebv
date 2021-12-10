@@ -1,5 +1,10 @@
 <?php
-
+if ("c" > "b") {
+    echo 'y';
+} else {
+    echo 'n';
+}
+die();
 // dingen
 CONST MAX_IMAGE_SIZE = 1024 * 1024 * 1024;
 CONST IMAGE_FOLDER = 'uploads/';
@@ -43,16 +48,10 @@ if (isset($_GET['delete'])) {
     // opzoeken hoe het bestand van de afbeelding heet
     // $result = imageListFromDatabase($_GET['delete']);
     // $image = $result->fetch();
-    // handig, kon ook in 1 keer!
-    // $image = imageListFromDatabase($_GET['delete'])->fetch();
-
-    // werkt toch nog niet, laat maar....
-
-    // hier ergens het bestand verwijderen, nog uitzoeken
-
-    //print_r($image);
+    // laat maar....TODO
+    // print_r($images);
 }
-
+searchInFile('bla', 'xx');
 include('form.php');
 
 // oude versie zonder database
