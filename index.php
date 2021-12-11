@@ -1,13 +1,9 @@
 <?php
-if ("c" > "b") {
-    echo 'y';
-} else {
-    echo 'n';
-}
-die();
+
 // dingen
 CONST MAX_IMAGE_SIZE = 1024 * 1024 * 1024;
 CONST IMAGE_FOLDER = 'uploads/';
+
 
 include('functions.php');
 
